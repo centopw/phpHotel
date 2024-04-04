@@ -63,7 +63,7 @@
 
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <label>Total Members</label>
+                                                <label>Number of people</label>
                                                 <input type="number"
                                                     class="form-control @error('total_numbers') is-invalid @enderror"name="total_members"
                                                     value="{{ old('total_numbers') }}">
@@ -73,7 +73,7 @@
                                             <div class="form-group">
                                                 <label>Date</label>
                                                 <div class="cal-icon">
-                                                    <input type="text"
+                                                    <input type="date"
                                                         class="form-control datetimepicker @error('date') is-invalid @enderror"name="date"
                                                         value="{{ old('date') }}">
                                                 </div>
@@ -83,7 +83,7 @@
                                             <div class="form-group">
                                                 <label>Time</label>
                                                 <div class="time-icon">
-                                                    <input type="text"
+                                                    <input type="time"
                                                         class="form-control @error('time') is-invalid @enderror"
                                                         id="datetimepicker3" name="time" value="{{ old('time') }}">
                                                 </div>
@@ -93,7 +93,7 @@
                                             <div class="form-group">
                                                 <label>Arrival Date</label>
                                                 <div class="cal-icon">
-                                                    <input type="text"
+                                                    <input type="date"
                                                         class="form-control datetimepicker @error('arrival_date') is-invalid @enderror"
                                                         name="arrival_date" value="{{ old('arrival_date') }}">
                                                 </div>
@@ -103,7 +103,7 @@
                                             <div class="form-group">
                                                 <label>Depature Date</label>
                                                 <div class="cal-icon">
-                                                    <input type="text"
+                                                    <input type="date"
                                                         class="form-control datetimepicker @error('depature_date') is-invalid @enderror"
                                                         name="depature_date" value="{{ old('depature_date') }}">
                                                 </div>
@@ -120,7 +120,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Phone Number</label>
-                                                <input type="text"
+                                                <input type="number"
                                                     class="form-control @error('phone_number') is-invalid @enderror"
                                                     id="usr1" name="phone_number" value="{{ old('phone_number') }}">
                                             </div>

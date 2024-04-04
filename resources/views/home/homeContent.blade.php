@@ -22,70 +22,6 @@
             </ul>
         </div>
     </aside>
-
-    {{--    <div class="wrap"> --}}
-    {{--        <div class="container"> --}}
-    {{--            <div class="row"> --}}
-    {{--                <div id="availability"> --}}
-    {{--                    <form action="#"> --}}
-
-    {{--                        <div class="a-col"> --}}
-    {{--                            <section> --}}
-    {{--                                <select class="cs-select cs-skin-border"> --}}
-    {{--                                    <option value="" disabled selected>Select Hotel</option> --}}
-    {{--                                    <option value="email">Luxe Hotel</option> --}}
-    {{--                                    <option value="twitter">Deluxe Hotel</option> --}}
-    {{--                                    <option value="linkedin">Five Star Hotel</option> --}}
-    {{--                                </select> --}}
-    {{--                            </section> --}}
-    {{--                        </div> --}}
-    {{--                        <div class="a-col alternate"> --}}
-    {{--                            <div class="input-field"> --}}
-    {{--                                <label for="date-start">Check In</label> --}}
-    {{--                                <input type="text" class="form-control" id="date-start" /> --}}
-    {{--                            </div> --}}
-    {{--                        </div> --}}
-    {{--                        <div class="a-col alternate"> --}}
-    {{--                            <div class="input-field"> --}}
-    {{--                                <label for="date-end">Check Out</label> --}}
-    {{--                                <input type="text" class="form-control" id="date-end" /> --}}
-    {{--                            </div> --}}
-    {{--                        </div> --}}
-    {{--                        <div class="a-col action"> --}}
-    {{--                            <a href="#"> --}}
-    {{--                                <span>Check</span> --}}
-    {{--                                Availability --}}
-    {{--                            </a> --}}
-    {{--                        </div> --}}
-    {{--                    </form> --}}
-    {{--                </div> --}}
-    {{--            </div> --}}
-    {{--        </div> --}}
-    {{--    </div> --}}
-
-    {{--    <div id="fh5co-counter-section" class="fh5co-counters"> --}}
-    {{--        <div class="container"> --}}
-    {{--            <div class="row"> --}}
-    {{--                <div class="col-md-3 text-center"> --}}
-    {{--                    <span class="fh5co-counter js-counter" data-from="0" data-to="20356" data-speed="5000" data-refresh-interval="50"></span> --}}
-    {{--                    <span class="fh5co-counter-label">User Access</span> --}}
-    {{--                </div> --}}
-    {{--                <div class="col-md-3 text-center"> --}}
-    {{--                    <span class="fh5co-counter js-counter" data-from="0" data-to="15501" data-speed="5000" data-refresh-interval="50"></span> --}}
-    {{--                    <span class="fh5co-counter-label">Hotels</span> --}}
-    {{--                </div> --}}
-    {{--                <div class="col-md-3 text-center"> --}}
-    {{--                    <span class="fh5co-counter js-counter" data-from="0" data-to="8200" data-speed="5000" data-refresh-interval="50"></span> --}}
-    {{--                    <span class="fh5co-counter-label">Transactions</span> --}}
-    {{--                </div> --}}
-    {{--                <div class="col-md-3 text-center"> --}}
-    {{--                    <span class="fh5co-counter js-counter" data-from="0" data-to="8763" data-speed="5000" data-refresh-interval="50"></span> --}}
-    {{--                    <span class="fh5co-counter-label">Rating &amp; Review</span> --}}
-    {{--                </div> --}}
-    {{--            </div> --}}
-    {{--        </div> --}}
-    {{--    </div> --}}
-
     <div id="featured-hotel" class="fh5co-bg-color">
         <div class="container">
             <div class="row">
@@ -109,8 +45,6 @@
                                     '',
                                     json_decode($hotel->sliderImage),
                                 );
-                                //                                            $arraytoString = implode($sliderImage[0]);
-                                //                                            dd($arraytoString);
                             @endphp
                             @foreach ($sliderImages as $sliderImage)
                                 @if ($imageCount == 1)
@@ -279,25 +213,6 @@
                             </div>
                         </div>
                     </div>
-                    {{--                    <div class="tab-content" data-tab-content="tab5"> --}}
-                    {{--                        <div class="container"> --}}
-                    {{--                            <div class="row"> --}}
-                    {{--                                <div class="col-md-6"> --}}
-                    {{--                                    <img src="{{asset('assets/home-assets/images/tab_img_5.jpg')}}" class="img-responsive" alt="Image"> --}}
-                    {{--                                </div> --}}
-                    {{--                                <div class="col-md-6"> --}}
-                    {{--                                    <span class="super-heading-sm">World Class</span> --}}
-                    {{--                                    <h3 class="heading">Spa</h3> --}}
-                    {{--                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias officia perferendis modi impedit, rem quasi veritatis. Consectetur obcaecati incidunt, quae rerum, accusamus sapiente fuga vero at. Quia, labore, reprehenderit illum dolorem quae facilis reiciendis quas similique totam sequi ducimus temporibus ex nemo, omnis perferendis earum fugit impedit molestias animi vitae.</p> --}}
-                    {{--                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam neque blanditiis eveniet nesciunt, beatae similique doloribus, ex impedit rem officiis placeat dignissimos molestias temporibus, in! Minima quod, consequatur neque aliquam.</p> --}}
-                    {{--                                    <p class="service-hour"> --}}
-                    {{--                                        <span>Service Hours</span> --}}
-                    {{--                                        <strong>7:30 AM - 8:00 PM</strong> --}}
-                    {{--                                    </p> --}}
-                    {{--                                </div> --}}
-                    {{--                            </div> --}}
-                    {{--                        </div> --}}
-                    {{--                    </div> --}}
                     <div class="tab-content" data-tab-content="tab6">
                         <div class="container">
                             <div class="row">
@@ -369,51 +284,4 @@
             </div>
         </div>
     </div>
-
-    {{--    <div id="fh5co-blog-section"> --}}
-    {{--        <div class="container"> --}}
-    {{--            <div class="row"> --}}
-    {{--                <div class="col-md-12"> --}}
-    {{--                    <div class="section-title text-center"> --}}
-    {{--                        <h2>Our Blog</h2> --}}
-    {{--                    </div> --}}
-    {{--                </div> --}}
-    {{--            </div> --}}
-    {{--            <div class="row"> --}}
-    {{--                <div class="col-md-4"> --}}
-    {{--                    <div class="blog-grid" style="background-image: url(assets/home-assets/images/image-1.jpg);"> --}}
-    {{--                        <div class="date text-center"> --}}
-    {{--                            <span>09</span> --}}
-    {{--                            <small>Aug</small> --}}
-    {{--                        </div> --}}
-    {{--                    </div> --}}
-    {{--                    <div class="desc"> --}}
-    {{--                        <h3><a href="#">Most Expensive Hotel</a></h3> --}}
-    {{--                    </div> --}}
-    {{--                </div> --}}
-    {{--                <div class="col-md-4"> --}}
-    {{--                    <div class="blog-grid" style="background-image: url(assets/home-assets/images/image-2.jpg);"> --}}
-    {{--                        <div class="date text-center"> --}}
-    {{--                            <span>09</span> --}}
-    {{--                            <small>Aug</small> --}}
-    {{--                        </div> --}}
-    {{--                    </div> --}}
-    {{--                    <div class="desc"> --}}
-    {{--                        <h3><a href="#">1st Anniversary of Luxe Hotel</a></h3> --}}
-    {{--                    </div> --}}
-    {{--                </div> --}}
-    {{--                <div class="col-md-4"> --}}
-    {{--                    <div class="blog-grid" style="background-image: url(assets/home-assets/images/image-3.jpg);"> --}}
-    {{--                        <div class="date text-center"> --}}
-    {{--                            <span>09</span> --}}
-    {{--                            <small>Aug</small> --}}
-    {{--                        </div> --}}
-    {{--                    </div> --}}
-    {{--                    <div class="desc"> --}}
-    {{--                        <h3><a href="#">Discover New Adventure</a></h3> --}}
-    {{--                    </div> --}}
-    {{--                </div> --}}
-    {{--            </div> --}}
-    {{--        </div> --}}
-    {{--    </div> --}}
 @endsection
