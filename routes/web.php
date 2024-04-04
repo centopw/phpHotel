@@ -14,6 +14,7 @@ use App\Http\Livewire\Admin\DeleteSlider;
 use App\Http\Livewire\Admin\Booking;
 use App\Http\Controllers\RoomBookingController;
 use App\Mail\RoomNotification;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,7 +36,7 @@ Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/hotels/{name}', [HomeController::class, 'hotels'])->name('hotels.name');
-
+Route::get('/filter-booking', [RoomBookingController::class, 'filterBookings'])->name('booking.index');
 
 
 Route::middleware([
@@ -60,6 +61,6 @@ Route::middleware([
 
 Route::get('bookroom/{user_id}/{room_id}/{name}', [RoomBookingController::class, 'bookRoom'])->name('bookroom.user_id.room_id');
 Route::POST('addbooking', [RoomBookingController::class, 'addbooking'])->name('addbooking');
-Route::get('email' ,function(){
+Route::get('email', function () {
     return new RoomNotification();
 });

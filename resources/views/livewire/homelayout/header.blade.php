@@ -14,13 +14,27 @@
                                     <li><a href="{{ url('hotels/' . $hotels_name->name) }}">{{ $hotels_name->name }}</a>
                                     </li>
                                 @endforeach
-
                             </ul>
                         </li>
                         <li><a href="{{ route('services') }}">Services</a></li>
-                        {{--                        <li><a href="{{route('blog')}}">Blog</a></li> --}}
                         <li><a href="{{ route('contact') }}">Contact</a></li>
-                        <li><a href="{{ route('login') }}">login</a></li>
+                        @if (Auth::check())
+                            <li>
+                                <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    style="display: none;">
+                                    @csrf
+                                </form>
+                            </li>
+                        @else
+                            <li><a href="{{ route('login') }}">Login</a></li>
+                            <li><a href="{{ route('register') }}">register</a></li>
+                        @endif
                     </ul>
                 </nav>
             </div>

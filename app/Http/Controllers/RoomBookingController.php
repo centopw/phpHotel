@@ -11,24 +11,22 @@ class RoomBookingController extends Controller
 {
     public function bookRoom($user_id, $room_id, $name)
     {
-//        dd($user_id, $room_id);
-//        $roomBooking = RoomBooking:
         $hotel = hotels::where('name', $name)->get();
         $rooms = rooms::where('status', 1)->get();
-        return view('hotels.roombooking', compact('hotel', 'rooms' ,'user_id', 'room_id'));
+        return view('hotels.roombooking', compact('hotel', 'rooms', 'user_id', 'room_id'));
     }
+
     public function addbooking(Request $request)
     {
-
         $validated = $request->validate([
-            'name'=> 'required' ,
-            'total_members'=> 'required' ,
-            'date'=> 'required' ,
-            'time'=> 'required' ,
-            'arrival_date'=> 'required' ,
-            'depature_date'=> 'required' ,
-            'email'=> 'required' ,
-            'phone_number'=> 'required' ,
+            'name' => 'required',
+            'total_members' => 'required',
+            'date' => 'required',
+            'time' => 'required',
+            'arrival_date' => 'required',
+            'depature_date' => 'required',
+            'email' => 'required',
+            'phone_number' => 'required',
         ]);
 
         RoomBooking::create([
@@ -47,5 +45,30 @@ class RoomBookingController extends Controller
 
         session()->flash('message', 'Request Send Successfully!');
         return back();
+    }
+
+    public function filterBookings(Request $request)
+    {
+        $query = RoomBooking::query();
+
+        if ($request->has('name')) {
+            $query->where('name', 'like', '%' . $request->name . '%');
+        }
+
+        if ($request->has('email')) {
+            $query->where('email', 'like', '%' . $request->email . '%');
+        }
+
+        if ($request->has('phone_number')) {
+            $query->where('phone_number', 'like', '%' . $request->phone_number . '%');
+        }
+
+        if ($request->has('date')) {
+            $query->where('date', $request->date);
+        }
+
+        $bookings = $query->paginate(10);
+
+        return view('filter-booking.index', compact('bookings'));
     }
 }
